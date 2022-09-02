@@ -1,0 +1,265 @@
+@font-face {
+  font-family: Mukta;
+  src: url(../style/Mukta-Regular.ttf);
+}
+@font-face {
+  font-family: titulo;
+  src: url(../style/titulo.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Mukta";
+}
+
+body {
+  background-color: #0045AF;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='268' height='268' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%231515D1' stroke-width='3.3'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23856D00'%3E%3Ccircle cx='769' cy='229' r='6'/%3E%3Ccircle cx='539' cy='269' r='6'/%3E%3Ccircle cx='603' cy='493' r='6'/%3E%3Ccircle cx='731' cy='737' r='6'/%3E%3Ccircle cx='520' cy='660' r='6'/%3E%3Ccircle cx='309' cy='538' r='6'/%3E%3Ccircle cx='295' cy='764' r='6'/%3E%3Ccircle cx='40' cy='599' r='6'/%3E%3Ccircle cx='102' cy='382' r='6'/%3E%3Ccircle cx='127' cy='80' r='6'/%3E%3Ccircle cx='370' cy='105' r='6'/%3E%3Ccircle cx='578' cy='42' r='6'/%3E%3Ccircle cx='237' cy='261' r='6'/%3E%3Ccircle cx='390' cy='382' r='6'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 2px solid #FCDE19;
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.62);
+  backdrop-filter: blur(4px);
+  margin-bottom: 20px;
+  top: 0;
+  position: fixed;
+  z-index: 1;
+  height: 100px;
+}
+nav :nth-child(1) {
+  line-height: 100px;
+  margin-left: 25px;
+  font-family: "titulo";
+  width: 60%;
+  font-size: 4.86vw;
+  color: #FCDE19;
+  text-shadow: 5px 5px 8px #000;
+}
+nav :nth-child(2) {
+  width: 40%;
+  display: flex;
+  justify-content: end;
+}
+nav :nth-child(2) img {
+  height: 100px;
+  width: 95px;
+}
+
+main {
+  min-height: 100vh;
+}
+
+#attr {
+  margin: 150px 0 20px 0;
+}
+
+#pje {
+  display: none;
+}
+
+#error {
+  width: 100%;
+  padding: 25px;
+  font-size: 24px;
+  color: #fff;
+  border-top: 2px solid #FCDE19;
+  border-bottom: 2px solid #FCDE19;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.62);
+  backdrop-filter: blur(4px);
+}
+
+.attributes {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 25px;
+  margin-bottom: 20px;
+}
+.attributes h1, .attributes h2 {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: 2.7vw;
+  padding: 2.25vw 0;
+  border-top: 2px solid #FCDE19;
+  border-bottom: 2px solid #FCDE19;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(2px);
+  margin-bottom: 20px;
+}
+.attributes .sector {
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(2px);
+  border: 2px solid #FCDE19;
+  margin: 0 2px 20px 2px;
+  padding: 5px;
+  box-shadow: 5px 5px 10px #000;
+  width: calc(25% - 4px);
+}
+.attributes .sector h3 {
+  width: 100%;
+  text-align: center;
+  color: #FCDE19;
+  font-size: 2.16vw;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.attributes .sector .att {
+  display: flex;
+  margin: 3px;
+  height: 2.45vw;
+  max-height: 27px;
+}
+.attributes .sector .att p {
+  width: 70%;
+  color: #fff;
+  font-size: 1.57vw;
+}
+.attributes .sector .att input {
+  width: 20%;
+  text-align: center;
+  font-weight: 600;
+  border-radius: 15px;
+}
+.attributes .sector .att input::-webkit-inner-spin-button {
+  appearance: none;
+}
+.attributes .button {
+  width: 100%;
+  margin: 15px 0;
+  display: flex;
+  justify-content: center;
+}
+.attributes .button button {
+  height: 3.6vw;
+  min-height: 28px;
+  width: 10vw;
+  min-width: 60px;
+  border: 2px solid #FCDE19;
+  border-radius: 4px;
+  color: #1515D1;
+  font-weight: 800;
+  text-transform: uppercase;
+  background-color: #fff;
+  box-shadow: 5px 5px 8px #000;
+  cursor: pointer;
+  transition: all 450ms;
+}
+.attributes .button button:hover {
+  background-color: #0045AF;
+  color: #FCDE19;
+  border: 2px solid #fff;
+  box-shadow: 15px 15px 18px #000;
+}
+.attributes .puntajes {
+  margin: 0 5px;
+  border: 2px solid #FCDE19;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(2px);
+  box-shadow: 5px 5px 10px #000;
+  width: calc(24% - 4px);
+}
+.attributes .puntajes h3 {
+  text-align: center;
+  color: #FCDE19;
+  text-transform: uppercase;
+}
+.attributes .puntajes p {
+  margin: 3px 0;
+  text-transform: capitalize;
+}
+.attributes .puntajes .pos {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.attributes .puntajes .pos :nth-child(1) {
+  width: 75%;
+  font-size: 1.25vw;
+}
+.attributes .puntajes .pos :nth-child(2) {
+  width: 20%;
+  font-weight: 900;
+  font-size: 1.25vw;
+}
+
+.muyMalo {
+  border: 2px solid #a00;
+  color: #a00;
+  text-align: center;
+  background-color: #fff;
+}
+
+.malo {
+  border: 2px solid #aa3500;
+  color: #aa3500;
+  text-align: center;
+  background-color: #fff;
+}
+
+.normal {
+  border: 2px solid #0068AF;
+  color: #0068AF;
+  text-align: center;
+  background-color: #fff;
+}
+
+.bueno {
+  border: 2px solid #35af33;
+  color: #35af33;
+  text-align: center;
+  background-color: #fff;
+}
+
+.elite {
+  border: 2px solid #006400;
+  color: #006400;
+  text-align: center;
+  background-color: #fff;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  height: 100px;
+  background: #0045AF;
+  border-top: 2px solid #FCDE19;
+}
+footer img {
+  max-width: 100px;
+}
+footer div {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+footer div p {
+  width: 43%;
+  text-align: end;
+}
+footer div a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  width: 55%;
+}
+
+#sfcutnujwj352cmtxjedptbbmu2gkxxc3km {
+  scale: 0.8;
+  margin-left: -11vw;
+}
+
+/*# sourceMappingURL=index.css.map */
