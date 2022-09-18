@@ -1,11 +1,14 @@
 // Variables de calculos
 
 let limiteMuyMalo = 45;
-let limiteMalo = 63;
-let limiteNormal = 68;
-let limiteBueno = 75;
+let limiteMalo = 58;
+let limiteNormal = 62;
+let limiteBueno = 70;
 let primaria = 0.7;
 let secundaria = 0.3;
+let vueltaNumero = 0;
+let promedioCalidad = 55;
+let minimoIndividual = 45;
 
 // Variables refentes al DOM
 
@@ -20,7 +23,39 @@ let centrocampistasHTML = document.getElementById('centrocampistas')
 let mediapuntasHTML = document.getElementById('mediapuntas');
 let mediapuntaCentralHTML = document.getElementById('mediapuntaCentral');
 let delanterosHTML = document.getElementById('delanteros');
+let jugadoresHTML = document.getElementById('jugadores')
+let arquerosHTML = document.getElementById('arqueros')
+let defensoresCentralesHTML = document.getElementById('defensoresCentrales')
+let lateralesPlantelHTML = document.getElementById('lateralesPlantel')
+let mediocierrePlantelHTML = document.getElementById('mediocierrePlantel')
+let mediocampistasHTML = document.getElementById('mediocampistas')
+let mediocampistasBandaHTML = document.getElementById('mediocampistasBanda')
+let mediapuntaCentroHTML = document.getElementById('mediapuntaCentro')
+let mediapuntaBandaHTML = document.getElementById('mediapuntaBanda')
+let delanterosPlantelHTML = document.getElementById('delanterosPlantel')
+let menu = document.getElementById('menu')
+let dataHTML = document.getElementById('data')
+let buttonAZ = document.getElementById('AZ')
+let buttonfNac = document.getElementById('buttonNac')
+let buttonIn = document.getElementById('llegada')
+let buttonOut = document.getElementById('partida')
+let buttonPaises = document.getElementById('paises')
+let encuentrosHTML = document.getElementById('encuentros')
+let temp22HTML = document.getElementById('temp22')
 let inputs = document.querySelectorAll('input')
+let puntajeTitulo = document.getElementById('puntajes')
+let gk = document.getElementById('gk')
+let cr = document.getElementById('cr')
+let ct = document.getElementById('ct')
+let lt = document.getElementById('lt')
+let mc = document.getElementById('mc')
+let md = document.getElementById('md')
+let mpc = document.getElementById('mpc')
+let mpb = document.getElementById('mpb')
+let del = document.getElementById('del')
+let footerYT = document.getElementById('footerYT')
+let footerSim = document.getElementById('footerSim')
+
 
 // Referencias a roles
 
@@ -109,6 +144,97 @@ let delprdf;
 let delprap;
 let delprat;
 let f9;
+let calidadPortero;
+let calidadDFC;
+let calidadLAT;
+let calidadMC;
+let calidadMEC;
+let calidadMEB;
+let calidadMP;
+let calidadMPB;
+let calidadFW;
+let nacionality
+
+//roles para traduccion
+
+let pordf;
+let porcierredf;
+let porcierreap;
+let porcierreat;
+let cardef;
+let carap;
+let carat;
+let cmpcarap;
+let cmpcarat;
+let icardef;
+let icarap;
+let icarat;
+let dftoquedf;
+let dftoquetp;
+let dftoquecu;
+let dflatdf;
+let dflatap;
+let dflatat;
+let dfprdf;
+let dfprtp;
+let dfprcu;
+let libapoyo;
+let libataque;
+let fbdf;
+let fbap;
+let fbat;
+let fbpdf;
+let egche;
+let reg;
+let segvolanteap;
+let segvolanteat;
+let mezap;
+let mezat;
+let mdcentrodf;
+let mdcentroap;
+let ctrrecdf;
+let ctrrecap;
+let tdterreno;
+let orgadelap;
+let orgadelat;
+let pivotdf;
+let mpuntaap;
+let mpuntaat;
+let mfdf;
+let mfap;
+let mfat;
+let extdefdf;
+let extdefap;
+let pivotorgdf;
+let pivotorgap;
+let intmx;
+let mcierre;
+let wgap;
+let wgat;
+let wginap;
+let wginat;
+let orgint;
+let orgbandaap;
+let orgbandaat;
+let bespacios;
+let interiorfwap;
+let interiorfwat;
+let sorpresa;
+let objetivoap;
+let objetivoat;
+let quartista;
+let segundodelap;
+let segundodelat;
+let delavanz;
+let delaobjetivoap;
+let delobjetivoat;
+let nuevedearea;
+let delancmpap;
+let delancmpat;
+let delanprdf;
+let delanprap;
+let delanprat;
+let nueve;
 
 // Arrays de posiciones
 
@@ -121,6 +247,10 @@ let centrocampistas = []
 let mediapuntas = []
 let mediapuntaCentral = []
 let delanteros = [];
+let plantel = []
+let player = []
+let paises = []
+let encuentro = []
 
 let promediandoPosiciones = (aereo, blocaje,comunicacion,controlArquero,excentricidad,punos,mando,pasesArquero,reflejos,salidas,saqueMano,saquePuerta,oneToOne,cabeceo,centros,control,entradas,marcaje,pases,pk,regate,remate,sEsquina,sLargos,tecnica,tLejano,tLibres,agresividad,anticipacion,colocacion,concentracion,decisiones,desmarques,determinacion,jEquipo,lider,sacrificio,serenidad,talento,valentia,vision,aceleracion,agilidad,salto,equilibrio,fuerza,rFisica,resistencia,velocidad) => {
 
@@ -220,4 +350,65 @@ delanteroPresionanteApoyo = (((((  agresividad + anticipacion + decisiones + jEq
 delanteroPresionanteAtaque = ((((( agresividad + anticipacion + decisiones + jEquipo + sacrificio + valentia + aceleracion + resistencia + velocidad )/9)*primaria)+(((control + remate + concentracion + decisiones + serenidad + agilidad + equilibrio + fuerza  )/8)*secundaria))/2)*10
 falsoNueve = ((((( control + pases + regate + tecnica + decisiones + desmarques + serenidad + vision + aceleracion + agilidad )/10)*primaria)+(((remate + anticipacion + jEquipo + talento + equilibrio + velocidad  )/6)*secundaria))/2)*10
 
+}
+
+//ARMANDO LAS CLASES
+
+class fichaJugador{
+     constructor(name,nacionality,dateNacNumber,youngClub,dateInNumber,clubIn,dateOutNumber,clubOut,dateNac,dateIn,dateOut){
+          this.name = name,
+          this.nacionality = nacionality,
+          this.dateNacNumber = dateNacNumber,
+          this.youngClub = youngClub,
+          this.dateInNumber = dateInNumber,
+          this.clubIn = clubIn,
+          this.dateOutNumber = dateOutNumber,
+          this.clubOut = clubOut,
+          this.dateNac = dateNac ,
+          this.dateIn = dateIn ,
+          this.dateOut = dateOut
+     }
+ }
+
+ class nacionalidades{
+     constructor(acrom,nombrePais){
+          this.acrom = acrom,
+          this.nombrePais = nombrePais
+     }
+ }
+ class partidos{
+     constructor(fecha,myTeam,rival,torneo,condicion,estadio,gf,gc,result){
+          this.fecha = fecha,
+          this.myTeam = myTeam,
+          this.rival = rival,
+          this.torneo = torneo,
+          this.condicion = condicion,
+          this.estadio = estadio,
+          this.gf = gf,
+          this.gc = gc,
+          this.result = result
+     }
+ }
+
+ // MENU
+
+if(window.location.pathname == '/fmCalculator/index.html' ){
+     menu.innerHTML = `<a href="index.html" class="activo">Inicio</a>
+     <a href="html/equipo.html">Dorsales/Stats</a>
+     <a href="html/partidos.html">Partidos</a>
+     <a href="html/plantel.html">Roles Plantel</a>
+     <a href="html/historia.html">Jugadores</a>
+     <a href="html/starCup.html">ISSC</a>`
+}else{
+     menu.innerHTML = `<a href="../index.html">Inicio</a>
+     <a href="equipo.html" id="dorsales">Dorsales/Stats</a>
+     <a href="partidos.html" id="matches">Partidos</a>
+     <a href="plantel.html" id="roles">Roles Plantel</a>
+     <a href="historia.html" id="jug">Jugadores</a>
+     <a href="starCup.html" id="issc">ISSC</a>`
+     document.title == 'Dorsales' && (document.getElementById('dorsales').className = 'activo')
+     document.title == 'Partidos' && (document.getElementById('matches').className = 'activo')
+     document.title == 'plantel' && (document.getElementById('roles').className = 'activo')
+     document.title == 'ISSC' && (document.getElementById('issc').className = 'activo')
+     document.title == 'Historial-Jugadores' && (document.getElementById('jug').className = 'activo')
 }

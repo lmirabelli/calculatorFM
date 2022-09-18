@@ -9,6 +9,8 @@
     <link rel="shortcut icon" href="https://i.ibb.co/hc5jLT7/logo.png" type="image/x-icon">
     <script defer src="js/variablesGlobales.js"></script>
     <script defer src="js/index.js"></script>
+    <script defer src="js/traduccion.js"></script>
+    <script defer src="js/attLenguajes.js"></script>
     <title>Player Calculator</title>
 </head>
 
@@ -16,10 +18,15 @@
     <main>
         <nav>
             <div class="logo1">calculator-FM</div>
+            <div class="lenguaje">
+                <button id="esp">Español</button>
+                <button id="eng">English</button>
+            </div>
             <div class="logo2"><img src="https://i.ibb.co/hc5jLT7/logo.png" alt=""></div>
+            <!-- <div class="menu" id="menu"></div> -->
         </nav>
         <div class="attributes" id="attr">
-            <h1>Atributos de Jugador</h1>
+            <h1 id="huno">Atributos de Jugador</h1>
             <div class="sector" id="arco">
                 <h3>Arquero</h3>
                 <div class="att">
@@ -186,31 +193,31 @@
     
         </div>
         <div class="attributes" id="pje">
-            <h2>Promedios</h2>
+            <h2 id="puntajes">Puntajes</h2>
             <div class="puntajes">
-                <h3>arqueros</h3>
+                <h3 id="gk">arqueros</h3>
                 <div id="arqueros"></div>
             </div>
             <div class="puntajes">
-                <h3>carrileros</h3>
+                <h3 id="cr">carrileros</h3>
                 <div id="carrileros"></div>
-                <h3>laterales</h3>
+                <h3 id="lt">laterales</h3>
                 <div id="laterales"></div>
-                <h3>centrales</h3>
+                <h3 id="ct">centrales</h3>
                 <div id="centrales"></div>
             </div>
             <div class="puntajes">
-                <h3>Mediocentros</h3>
+                <h3 id="mc">Mediocentros</h3>
                 <div id="mediocentros"></div>
-                <H3>centrocampistas</H3>
+                <H3 id="md">centrocampistas</H3>
                 <div id="centrocampistas"></div>
             </div>
             <div class="puntajes">
-                <h3>Mediapunta central</h3>
+                <h3 id="mpc">Mediapunta central</h3>
                 <div id="mediapuntaCentral"></div>
-                <h3>mediapuntas</h3>
+                <h3 id="mpb">mediapuntas bandas</h3>
                 <div id="mediapuntas"></div>
-                <h3>delanteros</h3>
+                <h3 id="del">delanteros</h3>
                 <div id="delanteros"></div>
             </div>
         </div>
@@ -219,8 +226,8 @@
     <footer>
         <img src="https://i.ibb.co/55NvSxM/lm.png" alt="lm">
        <div>
-        <p>seguime en youtube:</p><a href="https://www.youtube.com/channel/UCCW73XhlOEEblBrWAackE8A" target="_blank">football manager argento</a>
-        <p>empeza a vivir el mundial ahora:</p><a href="https://lmirabelli.github.io/simuladorqatar22/" target="_blank">Simulador Qatar 2022</a>
+        <p id="footerYT">seguime en youtube:</p><a href="https://www.youtube.com/channel/UCCW73XhlOEEblBrWAackE8A" target="_blank">football manager argento</a>
+        <p id="footerSim">empeza a vivir el mundial ahora:</p><a href="https://lmirabelli.github.io/simuladorqatar22/" target="_blank">Simulador Qatar 2022</a>
        </div>
     </footer>
 </body>

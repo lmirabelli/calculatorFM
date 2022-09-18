@@ -21,10 +21,12 @@ body {
 nav {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   width: 100%;
   border-bottom: 2px solid #FCDE19;
   background: rgba(0, 0, 0, 0.3);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.62);
+  padding-top: 5px;
   backdrop-filter: blur(4px);
   margin-bottom: 20px;
   top: 0;
@@ -32,23 +34,65 @@ nav {
   z-index: 1;
   height: 100px;
 }
-nav :nth-child(1) {
-  line-height: 100px;
+nav .logo1 {
+  line-height: 30px;
   margin-left: 25px;
   font-family: "titulo";
-  width: 60%;
-  font-size: 4.86vw;
+  width: 50%;
+  font-size: 3.86vw;
   color: #FCDE19;
   text-shadow: 5px 5px 8px #000;
 }
-nav :nth-child(2) {
-  width: 40%;
+nav .logo2 {
+  width: 10%;
   display: flex;
   justify-content: end;
 }
-nav :nth-child(2) img {
-  height: 100px;
-  width: 95px;
+nav .logo2 img {
+  height: 70px;
+  width: 65px;
+}
+nav .lenguaje {
+  width: 35%;
+  display: flex;
+  justify-content: end;
+}
+nav .lenguaje button {
+  width: 12%;
+  height: 30px;
+  font-weight: 600;
+  margin: 0 7px;
+  border: 2px solid #FCDE19;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  border-radius: 10px;
+  transition: 450ms;
+}
+nav .lenguaje button:hover {
+  background: #fff;
+  color: #0045AF;
+  border: 2px solid #1515D1;
+  cursor: pointer;
+}
+nav .menu {
+  width: 100%;
+}
+nav .menu a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  line-height: 22px;
+  font-size: 16px;
+  transition: all 0.35s;
+  margin: 0 4px;
+}
+nav .menu a:hover {
+  color: #FCDE19;
+  font-size: 18px;
+}
+nav .menu .activo {
+  color: #FCDE19;
+  font-size: 18px;
 }
 
 main {
@@ -260,6 +304,205 @@ footer div a {
 #sfcutnujwj352cmtxjedptbbmu2gkxxc3km {
   scale: 0.8;
   margin-left: -11vw;
+}
+
+#jugadores {
+  margin: 150px 3vw 25px 3vw;
+  border: 2px solid #FCDE19;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(2px);
+  box-shadow: 5px 5px 10px #000;
+}
+#jugadores div .posicion {
+  width: 100%;
+}
+#jugadores div .posicion h2 {
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+}
+#jugadores div .renglon {
+  display: flex;
+  width: 100%;
+  color: #fff;
+  border-bottom: 2px solid #0045AF;
+  transition: all 0.3s;
+}
+#jugadores div .renglon:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+#jugadores div .renglon .nombre {
+  width: 20%;
+  margin-left: 3px;
+  line-height: 31px;
+}
+#jugadores div .renglon .nombreLargo {
+  font-size: 14px;
+  width: 20%;
+  margin-left: 3px;
+  line-height: 31px;
+}
+#jugadores div .renglon .roles {
+  margin: 0 4px;
+  text-align: center;
+}
+#jugadores div .gk .roles {
+  width: 100px;
+}
+#jugadores div .dfc .roles, #jugadores div .lat .roles, #jugadores div .mc .roles, #jugadores div .mec .roles {
+  width: 90px;
+}
+
+.large {
+  font-size: 12px;
+}
+
+.short {
+  font-size: 14px;
+}
+
+.titular {
+  margin: 150px auto 0;
+  width: 70%;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 3px solid #FCDE19;
+  border-radius: 25px;
+  height: 50px;
+  line-height: 50px;
+}
+.titular h2 {
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.botonera {
+  margin-top: 15px;
+}
+.botonera div {
+  display: flex;
+  justify-content: space-around;
+  margin: 5px auto;
+  width: 90%;
+  flex-wrap: wrap;
+}
+.botonera div button {
+  width: 150px;
+}
+
+#data {
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.62);
+  backdrop-filter: blur(4px);
+  width: 96%;
+  margin: 12px auto;
+}
+#data .ind {
+  display: flex;
+  border: 1px solid #FCDE19;
+}
+#data .ind div {
+  line-height: 40px;
+  width: 12.5%;
+  border-right: 1px solid #0045AF;
+  color: #fff;
+  text-align: center;
+  height: 40px;
+}
+
+.encuentros {
+  margin: 150px auto;
+  width: 96%;
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(4px);
+  padding: 22px;
+  border-radius: 22px;
+  border-top: 2px solid #FCDE19;
+  border-bottom: 2px solid #FCDE19;
+}
+.encuentros .encuentroRenglon {
+  display: flex;
+  border-bottom: 1px solid #0045AF;
+}
+.encuentros div {
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+}
+.encuentros .ident {
+  width: 2%;
+}
+.encuentros .fecha {
+  width: 6%;
+}
+.encuentros .myTeam {
+  width: 13%;
+}
+.encuentros .goles {
+  width: 4%;
+}
+.encuentros .estadio {
+  width: 33%;
+}
+.encuentros .vc {
+  background-color: #00af65;
+}
+.encuentros .dr {
+  background-color: #af0031;
+}
+.encuentros .em {
+  background-color: #a6a100;
+}
+
+.temporadas {
+  margin: 150px auto 25px;
+  width: 90%;
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  padding: 10px;
+  border-radius: 10px;
+  border-top: 2px solid #FCDE19;
+  border-bottom: 2px solid #FCDE19;
+}
+.temporadas .season {
+  text-align: center;
+  font-size: 1.4vw;
+  color: #fff;
+}
+.temporadas .dorsal {
+  border-bottom: 1px solid #0045AF;
+  display: flex;
+}
+.temporadas .dorsal .numero {
+  width: 5%;
+  color: #fff;
+}
+.temporadas .dorsal .jugador {
+  width: 12%;
+  color: #fff;
+}
+.temporadas .dorsal div {
+  text-align: center;
+  font-size: 12px;
+}
+
+.viejo {
+  width: 4%;
+  color: #aa3500;
+  font-weight: 600;
+}
+
+.joven {
+  width: 4%;
+  color: #006400;
+  font-weight: 600;
+}
+
+.medio {
+  width: 4%;
+  color: #fff;
 }
 
 /*# sourceMappingURL=index.css.map */
