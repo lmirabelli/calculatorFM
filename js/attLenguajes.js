@@ -170,7 +170,20 @@ let espanol = () => {
 
                 puntajeInputs()
     
-    process.innerText = `revelar puntajes`
+    process.innerText = `todas`
+    processGK.innerText = `Arqueros`
+    processDF.innerText = `Defensores`
+    processLT.innerText = `Laterales`
+    processMC.innerText = `Medios`
+    processMP.innerText = `Mediapuntas`
+    processFW.innerText = `Delanteros`
+    tituloAttPrimario.innerText = 'importancia de los atributos primarios'
+    l1.innerText = 'meh'
+    l2.innerText = 'poco importante'
+    l3.innerText = 'algo importante'
+    l4.innerText = 'muy importante'
+    l5.innerText = 'mucho muy importante'
+    tituloBotones. innerHTML = 'Procesar Posiciones'
     error.innerText = `NOTA: aunque su puntuacion de rol sea alta, si esta fuera de su posicion natural no servira de mucho`
     puntajeTitulo.innerHTML = `puntajes`
     gk.innerHTML = `arqueros`
@@ -353,7 +366,20 @@ let english = () => {
 
     puntajeInputs()
 
-    process.innerText = `process`
+    process.innerText = `All`
+    processGK.innerHTML = `Goalkeepers`
+    processDF.innerHTML = `Defenders`
+    processLT.innerHTML = `Wing & Full Backs`
+    processMC.innerHTML = `Mildfielders`
+    processMP.innerHTML = `Attack Mildfielders`
+    processFW.innerHTML = `Fowards`
+    tituloBotones. innerHTML = 'Process Positions'
+    tituloAttPrimario.innerText = 'importance of primary attributes'
+    l1.innerText = 'meh'
+    l2.innerText = 'less important'
+    l3.innerText = 'something important'
+    l4.innerText = 'very important'
+    l5.innerText = 'very very important'
     error.innerText = `NOTE: Even if your role score is high, if you're out of your natural position it won't do you much good.`
     puntajeTitulo.innerHTML = `player ratings`
     gk.innerHTML = `goalkeepers`

@@ -17,16 +17,24 @@
 <body>
     <main>
         <nav>
-            <div class="logo1">calculator-FM</div>
+            <div class="logo1">calculator-FM V1.1</div>
             <div class="lenguaje">
                 <button id="esp">Español</button>
                 <button id="eng">English</button>
             </div>
             <div class="logo2"><img src="https://i.ibb.co/hc5jLT7/logo.png" alt=""></div>
-            <!-- <div class="menu" id="menu"></div> -->
+            <div class="menu" id="menu"></div>
         </nav>
         <div class="attributes" id="attr">
             <h1 id="huno">Atributos de Jugador</h1>
+            <h4 id="tituloAttPrimario">importancia de los atributos primarios</h4>
+            <div class="button">
+                <button id="L5">mucho muy importante</button>
+                <button id="L4">muy importante</button>
+                <button id="L3">algo importante</button>
+                <button id="L2">poco importante</button>
+                <button id="L1">meh</button>
+            </div>
             <div class="sector" id="arco">
                 <h3>Arquero</h3>
                 <div class="att">
@@ -186,8 +194,15 @@
                     <p>Velocidad</p><input type="number" id="velocidad">
                 </div>
             </div>
+            <h4 id="tituloBotones">Procesar posiciones</h4>
             <div class="button">
-                <button id="process">Revelar puntajes</button>
+                <button id="process">Todas</button>
+                <button id="processGK">Arqueros</button>
+                <button id="processDF">Defensores</button>
+                <button id="processLT">Laterales</button>
+                <button id="processMC">Medios</button>
+                <button id="processMP">Mediapuntas</button>
+                <button id="processFW">Delanteros</button>
             </div>
             <div id="error">NOTA: aunque su puntuacion de rol sea alta, si esta fuera de su posicion natural no servira de mucho</div>
     

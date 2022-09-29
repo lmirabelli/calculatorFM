@@ -74,10 +74,14 @@ nav .lenguaje button:hover {
   border: 2px solid #1515D1;
   cursor: pointer;
 }
-nav .menu {
+nav .ulMenu {
   width: 100%;
+  display: flex;
 }
-nav .menu a {
+nav .ulMenu li {
+  list-style: none;
+}
+nav .ulMenu a {
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
@@ -85,14 +89,25 @@ nav .menu a {
   font-size: 16px;
   transition: all 0.35s;
   margin: 0 4px;
+  display: block;
 }
-nav .menu a:hover {
+nav .ulMenu a:hover {
   color: #FCDE19;
   font-size: 18px;
 }
-nav .menu .activo {
-  color: #FCDE19;
-  font-size: 18px;
+nav .ulMenu .btnMenu {
+  width: 20vw;
+}
+nav .ulMenu .btnMenu .btnSubMenu {
+  display: none;
+  background-color: #0045AF;
+  filter: drop-shadow(10px 10px 10px #000);
+}
+nav .ulMenu .btnMenu .btnSubMenu:hover {
+  background-color: #1515D1;
+}
+nav .ulMenu .btnMenu:hover .btnSubMenu {
+  display: block;
 }
 
 main {
@@ -126,19 +141,29 @@ main {
   padding: 25px;
   margin-bottom: 20px;
 }
-.attributes h1, .attributes h2 {
+.attributes h1,
+.attributes h2,
+.attributes h4 {
   width: 100%;
   text-align: center;
   color: #fff;
-  font-size: 2.7vw;
-  padding: 2.25vw 0;
   border-top: 2px solid #FCDE19;
   border-bottom: 2px solid #FCDE19;
   border-radius: 10px;
   background: rgba(0, 0, 0, 0.3);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(2px);
+}
+.attributes h1, .attributes h2 {
+  font-size: 2.7vw;
+  padding: 2.25vw 0;
   margin-bottom: 20px;
+}
+.attributes h4 {
+  font-size: 1.3vw;
+  padding: 1vw 0;
+  margin-bottom: 20px;
+  text-transform: uppercase;
 }
 .attributes .sector {
   background-color: rgba(0, 0, 0, 0.4);
@@ -179,18 +204,20 @@ main {
 }
 .attributes .button {
   width: 100%;
-  margin: 15px 0;
+  margin: 15px 0 30px 0;
   display: flex;
   justify-content: center;
 }
 .attributes .button button {
   height: 3.6vw;
+  margin: 0 0.5vw;
   min-height: 28px;
   width: 10vw;
   min-width: 60px;
   border: 2px solid #FCDE19;
   border-radius: 4px;
   color: #1515D1;
+  font-size: 1vw;
   font-weight: 800;
   text-transform: uppercase;
   background-color: #fff;
@@ -349,8 +376,21 @@ footer div a {
 #jugadores div .gk .roles {
   width: 100px;
 }
-#jugadores div .dfc .roles, #jugadores div .lat .roles, #jugadores div .mc .roles, #jugadores div .mec .roles {
+#jugadores div .dfc .roles,
+#jugadores div .lat .roles,
+#jugadores div .mc .roles,
+#jugadores div .mec .roles {
   width: 90px;
+}
+
+::-webkit-scrollbar {
+  background: #fff;
+  width: 10px;
+  border-left: 2px solid #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0045AF;
 }
 
 .large {
@@ -411,8 +451,35 @@ footer div a {
 }
 
 .encuentros {
-  margin: 150px auto;
   width: 96%;
+}
+
+.liga {
+  width: 70%;
+}
+
+.ligaHistorico {
+  width: 25%;
+}
+.ligaHistorico .renglon {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+.ligaHistorico .renglon .data {
+  width: 15%;
+}
+.ligaHistorico .renglon .equipo {
+  width: 55%;
+}
+
+.contenedor {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.encuentros, .liga, .ligaHistorico {
+  margin: 150px auto;
   background: rgba(0, 0, 0, 0.3);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(4px);
@@ -421,37 +488,56 @@ footer div a {
   border-top: 2px solid #FCDE19;
   border-bottom: 2px solid #FCDE19;
 }
-.encuentros .encuentroRenglon {
+.encuentros a, .liga a, .ligaHistorico a {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #0045AF;
+  padding: 0 4px;
+  border: 2px solid #0045AF;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: 600ms;
+}
+.encuentros a:hover, .liga a:hover, .ligaHistorico a:hover {
+  background-color: #fff;
+  border: 2px solid #000;
+}
+.encuentros .encuentroRenglon, .liga .encuentroRenglon, .ligaHistorico .encuentroRenglon {
   display: flex;
   border-bottom: 1px solid #0045AF;
 }
-.encuentros div {
+.encuentros div, .liga div, .ligaHistorico div {
   color: #fff;
   font-size: 14px;
   text-align: center;
 }
-.encuentros .ident {
+.encuentros .ident, .liga .ident, .ligaHistorico .ident {
   width: 2%;
 }
-.encuentros .fecha {
+.encuentros .ronda, .liga .ronda, .ligaHistorico .ronda {
+  width: 5%;
+}
+.encuentros .fecha, .liga .fecha, .ligaHistorico .fecha {
   width: 6%;
 }
-.encuentros .myTeam {
-  width: 13%;
+.encuentros .myTeam, .liga .myTeam, .ligaHistorico .myTeam {
+  width: 17%;
 }
-.encuentros .goles {
+.encuentros .myTeamEuro, .liga .myTeamEuro, .ligaHistorico .myTeamEuro {
+  width: 22%;
+}
+.encuentros .goles, .liga .goles, .ligaHistorico .goles {
   width: 4%;
 }
-.encuentros .estadio {
-  width: 33%;
+.encuentros .estadio, .liga .estadio, .ligaHistorico .estadio {
+  width: 31%;
 }
-.encuentros .vc {
+.encuentros .vc, .liga .vc, .ligaHistorico .vc {
   background-color: #00af65;
 }
-.encuentros .dr {
+.encuentros .dr, .liga .dr, .ligaHistorico .dr {
   background-color: #af0031;
 }
-.encuentros .em {
+.encuentros .em, .liga .em, .ligaHistorico .em {
   background-color: #a6a100;
 }
 

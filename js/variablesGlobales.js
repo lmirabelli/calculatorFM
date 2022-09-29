@@ -4,15 +4,26 @@ let limiteMuyMalo = 45;
 let limiteMalo = 58;
 let limiteNormal = 62;
 let limiteBueno = 70;
-let primaria = 0.7;
-let secundaria = 0.3;
 let vueltaNumero = 0;
-let promedioCalidad = 55;
+let promedioCalidad = 57;
 let minimoIndividual = 45;
 
 // Variables refentes al DOM
 
 let process = document.getElementById('process');
+let processGK = document.getElementById('processGK')
+let processDF = document.getElementById('processDF')
+let processLT = document.getElementById('processLT')
+let processMC = document.getElementById('processMC')
+let processMP = document.getElementById('processMP')
+let processFW = document.getElementById('processFW')
+let tituloAttPrimario = document.getElementById('tituloAttPrimario')
+let l1 = document.getElementById('L1')
+let l2 = document.getElementById('L2')
+let l3 = document.getElementById('L3')
+let l4 = document.getElementById('L4')
+let l5 = document.getElementById('L5')
+let tituloBotones = document.getElementById('tituloBotones')
 let error = document.getElementById('error')
 let arqueroHTML = document.getElementById('arqueros');
 let carrileroHTML = document.getElementById('carrileros')
@@ -41,7 +52,6 @@ let buttonIn = document.getElementById('llegada')
 let buttonOut = document.getElementById('partida')
 let buttonPaises = document.getElementById('paises')
 let encuentrosHTML = document.getElementById('encuentros')
-let temp22HTML = document.getElementById('temp22')
 let inputs = document.querySelectorAll('input')
 let puntajeTitulo = document.getElementById('puntajes')
 let gk = document.getElementById('gk')
@@ -393,22 +403,61 @@ class fichaJugador{
  // MENU
 
 if(window.location.pathname == '/fmCalculator/index.html' ){
-     menu.innerHTML = `<a href="index.html" class="activo">Inicio</a>
-     <a href="html/equipo.html">Dorsales/Stats</a>
-     <a href="html/partidos.html">Partidos</a>
-     <a href="html/plantel.html">Roles Plantel</a>
-     <a href="html/historia.html">Jugadores</a>
-     <a href="html/starCup.html">ISSC</a>`
+     menu.innerHTML = `<ul class="ulMenu">
+     <li class="btnMenu"><a href="index.html">inicio</a></li>
+     <li class="btnMenu"><a href="html/plantel.html">Roles Plantel</a></li>
+     <ul class="btnMenu"><a href="#">mi equipo</a>
+         <li class="btnSubMenu"><a href="html/partidos.html">partidos</a></li>
+         <li class="btnSubMenu"><a href="html/equipo.html">Equipo por temporada</a></li>
+         <li class="btnSubMenu"><a href="html/historia.html">Jugadores en la historia</a></li>
+     </ul>
+     <ul class="btnMenu"><a href="#">Internacionales</a>
+         <li class="btnSubMenu"><a href="html/starCup.html">ISSC</a></li>
+         <li class="btnSubMenu"><a href="html/mundial.html">Mundial</a></li>
+         <li class="btnSubMenu"><a href="html/mundialClubes.html">Mundialito</a></li>
+         <li class="btnSubMenu"><a href="html/champions.html">Champions League</a></li>
+         <li class="btnSubMenu"><a href="html/europaLeague.html">Europa League</a></li>
+         <li class="btnSubMenu"><a href="html/conferenceLeague.html">conference League</a></li>
+         <li class="btnSubMenu"><a href="html/euroStats.html">Stats Europa</a></li>
+         <li class="btnSubMenu"><a href="html/libertadores.html">Libertadores</a></li>
+         <li class="btnSubMenu"><a href="html/sudamericana.html">Sudamericana</a></li>
+     </ul>
+     <ul class="btnMenu"><a href="#">Nacionales</a>
+         <li class="btnSubMenu"><a href="html/premier.html">Premier</a></li>
+         <li class="btnSubMenu"><a href="html/championship.html">Championship</a></li>
+         <li class="btnSubMenu"><a href="html/leagueOne.html">League 1</a></li>
+         <li class="btnSubMenu"><a href="html/leagueTwo.html">League 2</a></li>
+         <li class="btnSubMenu"><a href="html/faCup.html">FA Cup</a></li>
+         <li class="btnSubMenu"><a href="html/leagueCup.html">League Cup</a></li>
+     </ul>
+ </ul>`
 }else{
-     menu.innerHTML = `<a href="../index.html">Inicio</a>
-     <a href="equipo.html" id="dorsales">Dorsales/Stats</a>
-     <a href="partidos.html" id="matches">Partidos</a>
-     <a href="plantel.html" id="roles">Roles Plantel</a>
-     <a href="historia.html" id="jug">Jugadores</a>
-     <a href="starCup.html" id="issc">ISSC</a>`
-     document.title == 'Dorsales' && (document.getElementById('dorsales').className = 'activo')
-     document.title == 'Partidos' && (document.getElementById('matches').className = 'activo')
-     document.title == 'plantel' && (document.getElementById('roles').className = 'activo')
-     document.title == 'ISSC' && (document.getElementById('issc').className = 'activo')
-     document.title == 'Historial-Jugadores' && (document.getElementById('jug').className = 'activo')
+     menu.innerHTML = `<ul class="ulMenu">
+     <li class="btnMenu"><a href="../index.html">inicio</a></li>
+     <li class="btnMenu"><a href="plantel.html">Roles Plantel</a></li>
+     <ul class="btnMenu"><a href="#">mi equipo</a>
+         <li class="btnSubMenu"><a href="partidos.html">partidos</a></li>
+         <li class="btnSubMenu"><a href="equipo.html">Equipo por temporada</a></li>
+         <li class="btnSubMenu"><a href="historia.html">Jugadores en la historia</a></li>
+     </ul>
+     <ul class="btnMenu"><a href="#">Internacionales</a>
+         <li class="btnSubMenu"><a href="starCup.html">ISSC</a></li>
+         <li class="btnSubMenu"><a href="mundial.html">Mundial</a></li>
+         <li class="btnSubMenu"><a href="mundialClubes.html">Mundialito</a></li>
+         <li class="btnSubMenu"><a href="champions.html">Champions League</a></li>
+         <li class="btnSubMenu"><a href="europaLeague.html">Europa League</a></li>
+         <li class="btnSubMenu"><a href="conferenceLeague.html">conference League</a></li>
+         <li class="btnSubMenu"><a href="euroStats.html">Stats Europa</a></li>
+         <li class="btnSubMenu"><a href="libertadores.html">Libertadores</a></li>
+         <li class="btnSubMenu"><a href="sudamericana.html">Sudamericana</a></li>
+     </ul>
+     <ul class="btnMenu"><a href="#">Nacionales</a>
+         <li class="btnSubMenu"><a href="premier.html">Premier</a></li>
+         <li class="btnSubMenu"><a href="championship.html">Championship</a></li>
+         <li class="btnSubMenu"><a href="leagueOne.html">League 1</a></li>
+         <li class="btnSubMenu"><a href="leagueTwo.html">League 2</a></li>
+         <li class="btnSubMenu"><a href="faCup.html">FA Cup</a></li>
+         <li class="btnSubMenu"><a href="leagueCup.html">League Cup</a></li>
+     </ul>
+ </ul>`
 }

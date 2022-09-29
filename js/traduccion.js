@@ -9,9 +9,9 @@ let traduccionRoles = () => {
         carat = 'carrilero - ataque';
         cmpcarap = 'carrilero completo - apoyo';
         cmpcarat = 'carrilero completo - ataque';
-        icardef = 'carrilero - defensa';
-        icarap = 'carrilero - apoyo';
-        icarat = 'carrilero - ataque';
+        icardef = 'carrilero inverso - defensa';
+        icarap = 'carrilero inverso - apoyo';
+        icarat = 'carrilero inverso - ataque';
         dftoquedf = 'central con toque - defensa';
         dftoquetp = 'central con toque - tapon';
         dftoquecu = 'central con toque - cubrir';
@@ -52,7 +52,7 @@ let traduccionRoles = () => {
         extdefdf = 'extremo defensivo - defensa';
         extdefap = 'extremo defensivo - apoyo';
         pivotorgdf = 'pivote organizador - defensa';
-        pivotorgdf = 'pivote organizador - apoyo';
+        pivotorgap = 'pivote organizador - apoyo';
         intmx = 'interior mixto';
         mcierre = 'medio cierre';
         wgap = 'extremo - apoyo';
@@ -137,7 +137,7 @@ let traduccionRoles = () => {
         extdefdf = 'defensive winger - defend';
         extdefap = 'defensive winger - support';
         pivotorgdf = 'deep lying playmaker - defend';
-        pivotorgdf = 'deep lying playmaker - support';
+        pivotorgap = 'deep lying playmaker - support';
         intmx = 'carrilero';
         mcierre = 'half back';
         wgap = 'winger - support';
